@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Buy</title>
+  <link rel="icon" type="image/x-icon" href="static/icon/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .result {
+      font-size: 1.5rem;
+      color: #27ae60;
+      margin: 20px 0;
+      animation: bounceIn 1.5s ease-out;
+    }
+
+    .result.no {
+      color: #e74c3c;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.3);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><a href="https://linkedin.com/in/talhak20" style="text-decoration: none;">TALHA KHALID</a></h1>
+    <p class="intro">Prediction Result</p>
+    <div class="result">
+      {% if prediction == 1 %}
+        <p>The user is likely to purchase!</p>
+      {% else %}
+        <p class="no">The user is unlikely to purchase!</p>
+      {% endif %}
+    </div>
+    <footer>
+      <p>Created by TALHA KHALID</p>
+    </footer>
+  </div>
+</body>
+</html>

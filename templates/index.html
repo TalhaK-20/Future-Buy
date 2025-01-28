@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Buy</title>
+  <link rel="icon" type="image/x-icon" href="static/icon/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      animation: slideIn 1s ease-out;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      color: #777;
+      margin-bottom: 30px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.2rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1><a href="https://linkedin.com/in/talhak20" style="text-decoration: none;">TALHA KHALID</a></h1>
+    <p class="intro">Full Stack Developer</p>
+    <form action="/predict" method="POST">
+      <div class="form-group">
+        <select name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="number" name="age" placeholder="Enter Age" required min="12" max="90" />
+      </div>
+      <div class="form-group">
+        <input type="number" name="salary" placeholder="Enter Salary" required min="1000" />
+      </div>
+      <button type="submit">Predict Purchase</button>
+    </form>
+    <footer>
+      <p>Created by TALHA KHALID</p>
+    </footer>
+  </div>
+</body>
+</html>
